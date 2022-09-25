@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         html {font-size: 18px;}
-        /* body { margin-top: -100px;} */
+        body { margin-top: -100px;}
         .navbar {background-color: darkslategrey;}
         .navbar:last-of-type {background-color:rgb(28, 64, 88);}
         div.presentacion{position: absolute;}
@@ -17,10 +17,12 @@
         li {padding: 0em 1.5em; text-align: center;}
         .badge {margin-bottom: 0.5rem;}
         
-        @media screen and (max-width: 600px) {
-            p {font-size: 70%; line-height: 100%;}       
-            .h1, .h2, .h3, h4, .h5, .h6 {font-size: 80%;}       
+        @media screen and (max-width: 400px) {
+            html {font-size: 12px;}
+            /* p {font-size: 70%; line-height: 120%;}       
+            .h1, .h2, .h3, h4, .h5, .h6 {font-size: 80%;}        */
             body {padding-top: 50px; margin-top: 0;}
+            .carousel-caption{position: relative;}
             div.presentacion {position: relative;}
         }
         
@@ -35,7 +37,7 @@
 <body>
     
 
-    <nav class="navbar navbar-expand-md navbar-dark">
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark">
         <div class="container-fluid text-end">
         <a class="navbar-brand" href="#"><img class="mx-3" src="codoacodo.png" alt="CodoAcodo" style="width: 8vh;"><span>Conf Bs As</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -64,19 +66,21 @@
                  <!-- <<<Opción Carrousel. Mucho texto para hacerlo responsive...>>> -->
 <div id="demo" class="carousel" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active bg-black">
+        <div class="carousel-item active bg-dark">
             <img class="img-fluid opacity-50" src="ba1.jpg" alt="Codo A Codo">
             <div class="carousel-caption mb-md-5 pb-md-5 ms-sm-5 ps-sm-5">
-                <p class="h1 text-end" >Conf Bs As</p>
-                <p class="text-end ps-sm-5 ms-sm-5">Llega por primera vez a Aregentina. Un evento para compartir con nuestra comunidad el conocimiento 
-                    y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer
-                    a miembros del evento, a otros estudiantes de Codo A Codo y los oradores de primer nivel 
-                    que tenemos para ti. ¡Te esperamos!
-                </p>
-                <div class="container-fluid d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-light  me-3 btn-sm">Quiero ser orador</button>
-                    <button type="button" class="btn btn-success">Comprar tickets</button>
-                </div>
+          
+                    <p class="h1 text-end" >Conf Bs As</p>
+                    <p class="text-end ps-sm-5 ms-sm-5">Llega por primera vez a Aregentina. Un evento para compartir con nuestra comunidad el conocimiento 
+                        y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer
+                        a miembros del evento, a otros estudiantes de Codo A Codo y los oradores de primer nivel 
+                        que tenemos para ti. ¡Te esperamos!
+                    </p>
+                    <div class="container-fluid d-flex justify-content-end">
+                        <button type="button" class="btn btn-outline-light  me-3 btn-sm">Quiero ser orador</button>
+                        <button type="button" class="btn btn-success">Comprar tickets</button>
+                    </div>
+               
             
                 
             </div>
