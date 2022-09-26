@@ -12,18 +12,17 @@
         body { margin-top: -100px;}
         .navbar {background-color: darkslategrey;}
         .navbar:last-of-type {background-color:rgb(28, 64, 88);}
-        div.presentacion{position: absolute;}
+        .presentacion{display: none; background-color: darkslategray; padding: 10vw; }
+        .presentacion p {color: white;}
         .btn-success {background-color:limegreen; border-color: limegreen;}
         li {padding: 0em 1.5em; text-align: center;}
         .badge {margin-bottom: 0.5rem;}
         
         @media screen and (max-width: 400px) {
             html {font-size: 12px;}
-            /* p {font-size: 70%; line-height: 120%;}       
-            .h1, .h2, .h3, h4, .h5, .h6 {font-size: 80%;}        */
             body {padding-top: 50px; margin-top: 0;}
-            .carousel-caption{position: relative;}
-            div.presentacion {position: relative;}
+            .carousel-caption{position: relative; display: none;}
+            .presentacion {display: inherit;}
         }
         
         /* div {border: solid fuchsia;}
@@ -36,7 +35,7 @@
 
 <body>
     
-
+<!-- MENÚ COLLAPASABLE -->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark">
         <div class="container-fluid text-end">
         <a class="navbar-brand" href="#"><img class="mx-3" src="codoacodo.png" alt="CodoAcodo" style="width: 8vh;"><span>Conf Bs As</span></a>
@@ -50,10 +49,10 @@
                 <a class="nav-link active" href="#">La Conferencia</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Oradores</a>
+                <a class="nav-link" href="#oradores">Oradores</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">El Lugar y la Fecha</a>
+                <a class="nav-link" href="#lugaryfecha">El Lugar y la Fecha</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#" style="color:limegreen">Comprar Ticketes</a>
@@ -63,51 +62,49 @@
         </div>
     </nav>
 
-                 <!-- <<<Opción Carrousel. Mucho texto para hacerlo responsive...>>> -->
+<!-- CARROUSEL PORTADA C/TEXTO INTRO -->
 <div id="demo" class="carousel" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active bg-dark">
+        <div class="carousel-item active bg-black">
             <img class="img-fluid opacity-50" src="ba1.jpg" alt="Codo A Codo">
             <div class="carousel-caption mb-md-5 pb-md-5 ms-sm-5 ps-sm-5">
-          
-                    <p class="h1 text-end" >Conf Bs As</p>
-                    <p class="text-end ps-sm-5 ms-sm-5">Llega por primera vez a Aregentina. Un evento para compartir con nuestra comunidad el conocimiento 
-                        y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer
-                        a miembros del evento, a otros estudiantes de Codo A Codo y los oradores de primer nivel 
-                        que tenemos para ti. ¡Te esperamos!
-                    </p>
-                    <div class="container-fluid d-flex justify-content-end">
-                        <button type="button" class="btn btn-outline-light  me-3 btn-sm">Quiero ser orador</button>
-                        <button type="button" class="btn btn-success">Comprar tickets</button>
-                    </div>
-               
-            
-                
+                <p class="h1 text-end" >Conf Bs As</p>
+                <p class="text-end ps-sm-5 ms-sm-5">Llega por primera vez a Aregentina. Un evento para compartir con nuestra comunidad el conocimiento 
+                    y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer
+                    a miembros del evento, a otros estudiantes de Codo A Codo y los oradores de primer nivel 
+                    que tenemos para ti. ¡Te esperamos!
+                </p>
+                <div class="container-fluid d-flex justify-content-end">
+                    <a href="#serorador"><button type="button" class="btn btn-outline-light">Quiero ser orador</button></a>
+                    <button type="button" class="btn btn-success ms-4">Comprar tickets</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-                            <!-- <<<Opción Texto/Imagen>>> -->
-<!-- <div style="position:relative; background-color: #222;">
-    <img style= "z-index: -1; opacity: 40%; width: 100%;" src="ba1.jpg" alt="Codo A Codo">
-    <div class="presentacion" style="right: 0vw; bottom: 0; z-index: 1; padding: 10vw;">
-        <h3 style="color: whitesmoke; text-align: right;">Conf. Bs. As.</h3>
-        <p style="color:whitesmoke ; text-align:right ;">Llega por primera vez a Aregentina. Un evento para compartir con nuestra comunidad el conocimiento 
-            y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer
-            a miembros del evento, a otros estudiantes de Codo A Codo y los oradores de primer nivel 
-            que tenemos para ti. ¡Te esperamos!
-        </p>
+<div class = "presentacion">
+    <p class="h1 text-end" >Conf Bs As</p>
+    <p class="text-end ps-sm-5 ms-sm-5">Llega por primera vez a Aregentina. Un evento para compartir con nuestra comunidad el conocimiento 
+        y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer
+        a miembros del evento, a otros estudiantes de Codo A Codo y los oradores de primer nivel 
+        que tenemos para ti. ¡Te esperamos!
+    </p>
+    <div class="container-fluid d-flex justify-content-end">
+        <button type="button" class="btn btn-outline-light  me-3 btn-sm">Quiero ser orador</button>
+        <button type="button" class="btn btn-success">Comprar tickets</button>
     </div>
+</div>
 
-</div> -->
-
-
+<!-- TÍTULO ORADORES -->
+<a id="oradores"><br></a>
 <div class="comtainer pt-4 text-center">
     <p class="h6 mb-0">CONOCE A LOS</p>
     <p class="h2">ORADORES</p>
 </div>
 
+
+<!-- CARDS ORADORES -->
 <div class="row px-sm-5 mx-sm-5">
     <div class="col-md-4">
         <div class="card">
@@ -150,6 +147,9 @@
         </div>
     </div>
 </div>
+
+<!-- BUENOS AIRES - OCTUBRE -->
+<a id="lugaryfecha"><br></a>
 <div class="row mt-4">
     <div class="col-sm-6 p-0 m-0">
             <img class="container-fluid p-0" src="honolulu.jpg" alt="Provincia de Buenos Aires">
@@ -167,12 +167,15 @@
     </div>
 </div>
 <br>
+<!-- TÍTULO FORM -->
 <div class="container">
     <p class="text-center text-uppercase m-0"><small class="small">Conviertete en un</small></p>
     <h2 class="text-uppercase text-center">Orador</h2>
     <p class="text-center small m-1">Anótate como orador para dar una charla ignite. Cuéntanos de qué quieres hablar</p>
 </div>
 
+<!-- FORM INSCRIPCIÓN PARA ORDAOR -->
+<a id="serorador">
 <form class="" action="">
     <div class="row d-flex justify-content-center">
         <div class="col-4">
@@ -194,7 +197,10 @@
         </div>
     </div>
 </form>
+</a>
 <br>
+
+<!-- FOOTER MENU -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container justify-content-center">
        
