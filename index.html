@@ -9,9 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         html {font-size: 18px;}
-        body { margin-top: -100px;}
+        /* body { margin-top: -100px;} */
         .navbar li {margin: 0 2vw; line-height: 2.5vh; text-align: center;}
         .navbar {background-color: darkslategrey;}
+        .navbar:first-of-type{position: fixed; z-index: 1; width: 100%;}
         .navbar:last-of-type {background-color:rgb(28, 64, 88);}
         .carousel-item > img {opacity: 50%;}
         .presentacion{display: none; background-color: black; opacity: 75%; padding: 10vw; }
@@ -26,6 +27,7 @@
         }
         @media screen and (max-width: 400px) {
             html {font-size: 12px;}
+            .navbar:first-of-type{position: absolute}
             .carousel-caption{position: relative; display: none;}
             .presentacion {display: inherit;}
             .carousel-item > img {opacity: 100%;}
@@ -43,7 +45,7 @@
 <body>
     
 <!-- MENÚ COLLAPASABLE -->
-    <nav class="navbar fixed-top navbar-expand-sm navbar-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark">
         <div class="container-fluid text-end">
         <a class="navbar-brand" href="#"><img class="mx-3" src="codoacodo.png" alt="CodoAcodo" style="width: 8vh;"><span>Conf Bs As</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
