@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrador Bootstrap - Ignacio Chaneton</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        html {font-size: 18px;}
+        /* body { margin-top: -100px;} */
+        .navbar li {margin: 0 2vw; line-height: 2.5vh; text-align: center;}
+        .navbar:first-of-type{z-index: 1; width: 100%; background-color: darkslategrey; }
+        .navbar:last-of-type {background-color:rgb(28, 64, 88);}
+        .carousel-item > img {opacity: 50%;}
+        .presentacion{display: none; background-color: black; opacity: 75%; padding: 10vw; }
+        .presentacion p {color: white;}
+        .btn-success {background-color:limegreen; border-color: limegreen;}
+        .badge {margin-bottom: 1vh;}
+        
+        @media screen and (max-width: 800px) {
+            html {font-size: 13px;} 
+            body {margin-top: 0px;}
+            .navbar li {margin: 0 0vw; line-height: 1vh;}
+        }
+        @media screen and (max-width: 400px) {
+            html {font-size: 12px;}
+            .navbar:first-of-type{position: static}
+            .carousel-caption{position: relative; display: none;}
+            .presentacion {display: inherit;}
+            .carousel-item > img {opacity: 100%;}
+            .navbar li {margin: 0 2vw; line-height: 2vh;}
+        }
+        
+        /* div {border: solid fuchsia;}
+        p, h1, h2, h3, h4, h5, h6, a {border: dashed fuchsia;}
+        .row {border: solid greenyellow 2px;}
+        nav, ul {border: solid red} */
+
+    </style>
+</head>
+
+<body>
+    
+<!-- MENÚ COLLAPASABLE -->
+    <nav class="navbar navbar-expand-sm navbar-dark mb-5">
+        <div class="container-fluid text-end">
+        <a class="navbar-brand" href="#"><img class="mx-3" src="codoacodo.png" alt="CodoAcodo" style="width: 8vh;"><span>Conf Bs As</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+           
+            <ul class="navbar-nav pe-5">
+                <li class="nav-item">
+                <a class="nav-link active" href="#">La Conferencia</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#oradores">Oradores</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#lugaryfecha">El Lugar y la Fecha</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#" style="color:limegreen">Comprar Ticketes</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+<div class="position-fixed translate-middle start-50 top-50 mx-5 bg-dark bg-opacity-75  w-50 h-25 p-4 text-center text-white rounded-3" id="creditCard">
+    <h3>Aquí iría la validación por tarjeta de crédito, etc, etc.</h3>
+   
+
+</div>
+
+
+
+<!-- FOOTER MENU -->
+<nav class="navbar navbar-expand-lg navbar-dark container-fluid position-absolute bottom-0 justify-content-center">
+    <div class="justify-content-center">
+       
+        <ul class="navbar-nav d-flex align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Preguntas frecuentes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contáctenos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Prensa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Conferencias</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Términos y condiciones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Privacidad</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Estudiantes</a>
+            </li>
+           
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<script src="compraTkt.js"></script>
+</body>
+</html>
+
